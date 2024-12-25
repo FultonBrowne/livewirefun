@@ -14,7 +14,7 @@ class BirdForm extends Component
     {
         return view("livewire.bird-form", [
             'entries' => Entry::latest()->get()
-        ]);
+        ])->layout('layouts.app');
     }
     public function submit()
     {
