@@ -21,7 +21,7 @@
         </thead>
         <tbody>
             @foreach($entries as $entry)
-                <tr>
+                <tr wire:key='{{ $entry->id }}' wire:transition>
                     <td>{{ $entry->created_at->format('Y-m-d H:i') }}</td>
                     <td>{{ $entry->bird_count }}</td>
                     <td>{{ $entry->notes }}</td>
